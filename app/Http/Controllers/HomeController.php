@@ -6,13 +6,15 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Doctor;
 
 class HomeController extends Controller
 {
     public function redirect(){
         if(Auth::id()){
             if(Auth::user()->usertype == '0'){
-                return View('user.home');
+                $doctor = doctor::all();
+                return View('user.home',compact('doctor'));
             }else{
                 return View('admin.home'); 
             }
@@ -22,6 +24,7 @@ class HomeController extends Controller
     }
 
     public function index () {
-        return view('user.home');
+        $doctor = doctor::all();
+        return view('user.home',compact('doctor'));
     }
 }
