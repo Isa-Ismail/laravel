@@ -87,9 +87,13 @@
               <a class="nav-link" href="/dashboard">dashboard</a>
             </li>
 
-            {{-- @if(Route::has('login'))
+            @if(Route::has('login'))
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('myappointment')}}">My appointment</a>
+            </li>
+            @endif
 
-            @auth 
+            {{-- @auth 
 
             <x-app-layout>  
               <p>hell</p>   

@@ -15,7 +15,7 @@
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_navbar.html -->
         @include('admin.navbar')
-        @include('admin.body')
+        {{-- @include('admin.body') --}}
     <!-- container-scroller -->
     <!-- plugins:js -->
         @include('admin.script')
