@@ -70,18 +70,6 @@
             <li class="nav-item active">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
 
             <li class="nav-item">
               <a class="nav-link" href="/dashboard">dashboard</a>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Doctor;
+use App\Models\Appointment;
 
 class AdminController extends Controller
 {
@@ -20,5 +21,24 @@ class AdminController extends Controller
 
         $doctor->save();
         return redirect()->back()->with('Doctor added successfully');
+    }
+
+    public function showappointment(){
+        $appointments=appointment::all();
+        return view('admin.showappointment', compact('appointments'));
+    }
+
+    public function approved($id){
+        $appointment=appointment::find($id);
+        $appointment->status='approved';
+        $appointment->save();
+        return redirect()->back();
+
+    }
+    public function disapp($id){
+        $appointment=appointment::find($id);
+        $appointment->delete();
+        return redirect()->back();
+
     }
 }

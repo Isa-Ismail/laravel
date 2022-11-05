@@ -129,11 +129,11 @@
         </tr>
         @foreach($appoint as $appoints)
         <tr style="background-color: bisque;">
-            <td style="padding: 10px">{{$appoints->doctor}}</td>
-            <td style="padding: 10px">{{$appoints->date}}</td>
-            <td style="padding: 10px">{{$appoints->message}}</td>
-            <td style="padding: 10px">{{$appoints->status}}</td>
-            <td style="padding: 10px"><a class="" href="{{url('cancel_appoint', $appoints->id)}}">Cancel</a></td>
+            <td style="padding: 20px">{{$appoints->doctor}}</td>
+            <td style="padding: 20px">{{$appoints->date}}</td>
+            <td style="padding: 20px">{{$appoints->message}}</td>
+            <td style="padding: 20px">{{$appoints->status}}</td>
+            <td style="padding: 20px"><a class="" href="{{url('cancel_appoint', $appoints->id)}}">Cancel</a></td>
         </tr>
         @endforeach
     </table>
