@@ -20,7 +20,7 @@ class AdminController extends Controller
         $doctor->speciality=$request->speciality;
 
         $doctor->save();
-        return redirect()->back()->with('Doctor added successfully');
+        return redirect('/showdoctor');
     }
 
     public function showappointment(){
@@ -33,12 +33,38 @@ class AdminController extends Controller
         $appointment->status='approved';
         $appointment->save();
         return redirect()->back();
-
     }
+
     public function disapp($id){
         $appointment=appointment::find($id);
         $appointment->delete();
         return redirect()->back();
+    }
 
+    public function showdoctor(){
+        $doctor=doctor::all();
+        return view('admin.showdoctor', compact('doctor'));
+    }
+
+    public function deletedoctor($id){
+        $doctor=doctor::find($id);
+        $doctor->delete();
+        return redirect()->back();
+    }
+
+    public function updatedoctor($id){
+        $doctor=doctor::find($id);
+        return view('admin.updatedoctor', compact('doctor'));
+    }
+
+    public function editdoctor(Request $request, $id){
+        $doctor=doctor::find($id);
+
+        $doctor->name=$request->name;
+        $doctor->phone=$request->number;
+        $doctor->room=$request->room;
+        $doctor->speciality=$request->speciality;
+        $doctor->save();
+        return redirect('/showdoctor');
     }
 }

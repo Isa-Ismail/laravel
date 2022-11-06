@@ -16,7 +16,7 @@
         <!-- partial:partials/_navbar.html -->
         @include('admin.navbar')
         <div class="container-fluid page-body-wrapper p-10">
-            <div align="center" style="padding: 70px">
+            <div style="">
                 <table>
                     <tr style="background-color: black">
                         <th style="padding: 20px; color: white">Patient Name</th>

@@ -43,7 +43,7 @@ class HomeController extends Controller
         }
         $data->save();
 
-        return redirect()->back();
+        return redirect('/myappointment');
     }
 
     public function myappointment () {
